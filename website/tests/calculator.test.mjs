@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { calculateMacros } from '../site/calculator.mjs';
+import { calculateMacros } from '../src/calculator.mjs';
 
 test('current 2,900 kcal plan allocates 385 g carbohydrates', () => {
   const result = calculateMacros(2900, 160, 80);

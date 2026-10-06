@@ -114,10 +114,12 @@
     <section class="guides-section" id="guides" aria-labelledby="guides-title"><div class="section wrap">
       <div class="section-heading"><div><p class="eyebrow">04 / THE FULL PICTURE</p><h2 id="guides-title">Your personal <em>field notes.</em></h2></div><button type="button" id="print-guide" class="small-button">Print this page <span aria-hidden="true">↗</span></button></div>
       <p class="section-intro">All the details from your Markdown guides, in one comfortable reading space.</p>
-      <div class="guide-picker" aria-label="Choose a guide"><a href="#guide-routine" class="guide-tab" aria-current="true">Daily routine</a><a href="#guide-diet-plan" class="guide-tab">Diet plan</a><a href="#guide-nutrition" class="guide-tab">Nutrition guide</a></div>
+      <div class="guide-library-tools"><label for="guide-search">Find a guide</label><input id="guide-search" type="search" placeholder="Search guide titles…" autocomplete="off"><span class="guide-count"><!-- GUIDE_COUNT --> guides</span></div>
+      <p id="guide-search-result" class="quiet-note" role="status"></p>
+      <div class="guide-picker" aria-label="Choose a guide"><!-- GUIDE_NAV --></div>
       <div class="source-note"><span aria-hidden="true">ⓘ</span><p><strong>The daily routine is the current plan.</strong> The diet and nutrition guides include earlier running and breakfast assumptions. Follow the routine for the latest timing and paused runs.</p></div>
       <div class="guide-reader"><!-- GUIDES --></div>
-      <noscript><p>JavaScript is disabled. <a href="diet-plan.md">Download the diet plan</a> or <a href="nutrition.md">nutrition guide</a>.</p></noscript>
+      <noscript><style>#guides .guide-content[hidden]{display:block!important}.guide-library-tools{display:none}</style><p>All guides are shown below because JavaScript is disabled.</p></noscript>
     </div></section>
   </main>
 

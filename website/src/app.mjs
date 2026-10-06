@@ -40,19 +40,28 @@ document.querySelector('#reset-macros').addEventListener('click', () => { form.r
 updateMacros();
 
 function selectGuide() {
-  const names = ['routine', 'diet-plan', 'nutrition'];
-  const name = location.hash.replace('#guide-', '');
-  if (!names.includes(name)) return;
-  for (const guide of names) {
-    document.querySelector(`#guide-${guide}`).hidden = guide !== name;
-    const tab = document.querySelector(`.guide-tab[href="#guide-${guide}"]`);
-    if (guide === name) tab.setAttribute('aria-current', 'true');
+  const articles = [...document.querySelectorAll('.guide-content')];
+  const id = location.hash.slice(1);
+  if (!articles.some(article => article.id === id)) return;
+  for (const article of articles) {
+    article.hidden = article.id !== id;
+    const tab = [...document.querySelectorAll('.guide-tab')].find(link => link.hash === `#${article.id}`);
+    if (article.id === id) tab.setAttribute('aria-current', 'true');
     else tab.removeAttribute('aria-current');
   }
   requestAnimationFrame(() => document.querySelector('#guides').scrollIntoView({ block: 'start' }));
 }
 window.addEventListener('hashchange', selectGuide);
 selectGuide();
+document.querySelector('#guide-search').addEventListener('input', event => {
+  const query = event.target.value.trim().toLocaleLowerCase();
+  let matches = 0;
+  for (const tab of document.querySelectorAll('.guide-tab')) {
+    tab.hidden = !tab.textContent.toLocaleLowerCase().includes(query);
+    if (!tab.hidden) matches++;
+  }
+  document.querySelector('#guide-search-result').textContent = matches ? '' : 'No guides match that title. Try another search.';
+});
 document.querySelector('#print-guide').addEventListener('click', () => window.print());
 
 if ('IntersectionObserver' in window) {
