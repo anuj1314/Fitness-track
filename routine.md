@@ -33,6 +33,15 @@
   iron supplements at least four hours apart from thyroxine. Confirm food
   spacing and any other medication interactions with your pharmacist for your
   specific product.
+- **Why separate them?** Calcium and iron can bind to levothyroxine in the gut,
+  reducing how much medicine is absorbed. This affects effectiveness rather
+  than making the food combination toxic. Milk and whey contain calcium, so
+  this routine conservatively keeps them four hours after the tablet.
+  Food-spacing guidance varies; [NHS guidance](https://www.nhs.uk/medicines/levothyroxine/how-and-when-to-take-levothyroxine/)
+  recommends four hours for calcium-rich foods. Confirm your product's advice
+  with your pharmacist. Keep habits consistent, and discuss substantial timing
+  changes with your prescriber if thyroid levels were stable on your previous
+  routine; do not change the prescribed dose yourself.
 - Thyroxine itself does not require a waiting period before exercise. The
   breakfast-to-gym interval is for digestive comfort, not a medication rule.
 - Keep breakfast light. If 45 minutes is too short for comfortable training,
